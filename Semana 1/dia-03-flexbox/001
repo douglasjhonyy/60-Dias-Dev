@@ -1,0 +1,42 @@
+📅 DIA 3: CSS FLEXBOX - LAYOUT MODERNO
+🎯 OBJETIVO DE HOJE:
+Criar um novo projeto com cards lado a lado usando Flexbox.
+
+
+🔍 ENTENDENDO FLEXBOX:
+display: flex;
+
+Ativa o Flexbox
+Itens ficam em linha (lado a lado)
+
+justify-content: center;
+
+Alinha no EIXO PRINCIPAL (horizontal)
+Opções: flex-start, flex-end, center, space-between, space-around
+
+align-items: stretch;
+
+Alinha no EIXO CRUZADO (vertical)
+stretch = todos os cards ficam com a mesma altura
+
+gap: 30px;
+
+Espaçamento entre os cards (mágico!)
+------------------------------------------------
+
+🔍 CONCEITOS IMPORTANTES:
+flex: 1;
+
+Cards crescem igualmente para ocupar espaço
+
+flex-direction: column;
+
+Dentro do card, itens ficam em coluna (um embaixo do outro)
+
+flex-grow: 1;
+
+O body do card cresce para empurrar o footer para baixo
+
+transform: translateY(-10px);
+
+Move o card 10px para cima no hover (efeito flutuante)

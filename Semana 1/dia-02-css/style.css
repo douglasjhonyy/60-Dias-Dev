@@ -1,0 +1,157 @@
+/* RESET BÁSICO */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilo do Body*/
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/*Container Principal*/
+
+header. main, footer{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*Cabeçalho*/
+
+header{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/*Seções*/
+
+section{
+    background: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2{
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+section p{
+    margin-bottom: 15px;
+
+}
+
+/*Listas*/
+
+ul, ol{
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+/*Links*/
+
+a{
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/*Imagem*/
+
+img{
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 20px auto;
+}
+
+/*Footer*/
+
+footer{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+footer p{
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE MOBILE */
+
+@media (max-width: 768px){
+    header h1{
+        font-size: 2rem;
+    }
+
+    section h2{
+        font-size: 1.5rem;
+    }
+
+    img{
+        max-width: 100%;
+    }
+}
+
+/* BARRAS DE HABILIDADE */
+
+.skill{
+    margin-bottom: 20px;
+}
+
+.skill p{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.skill-bar{
+    background: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.skill-level{
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}

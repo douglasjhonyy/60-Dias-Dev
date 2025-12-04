@@ -1,0 +1,176 @@
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/*HEADER*/
+
+header{
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+header h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p{
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/*CONTAINER COM FLEXBOX*/
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/*CARD*/
+
+.card{
+    background: white;
+    border-radius: 12px ;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/*HEADER DO CARD*/
+
+.card-header{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h2{
+    font-size: 1.5rem;
+}
+
+/*BODY DO CARD*/
+
+.card-body{
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-body p{
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card-body ul{
+    list-style: none;
+}
+
+.card-body li{
+    padding: 8px 0;
+    color: #666;
+}
+
+/*FOOTER DO CARD*/
+
+.card-footer{
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+/*BOTÂO*/
+
+.btn{
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/*FOOTER*/
+
+footer{
+    text-align: center;
+    padding: 30px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 900px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px){
+    header h1{
+        font-size: 2rem;
+    }
+
+    .card{
+        min-width: auto;
+    }
+}
+
+/*ICON*/
+.icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
