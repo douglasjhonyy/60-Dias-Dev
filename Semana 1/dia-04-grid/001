@@ -1,0 +1,52 @@
+🎯 OBJETIVO DE HOJE
+Aprender CSS Grid - o layout 2D mais poderoso do CSS moderno.
+Hoje você vai criar:
+
+✅ Galeria de imagens estilo Pinterest
+✅ Layout complexo com linhas E colunas
+✅ Grid responsivo automático
+✅ Áreas nomeadas (recurso avançado)
+
+Tempo: 2 horas de FOCO TOTAL 💪
+
+-----------------------------------------
+
+🔍 ENTENDENDO GRID:
+display: grid;
+
+Ativa o Grid Layout
+Itens se organizam em células
+
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+ESSA LINHA É MÁGICA! ✨
+repeat() = repetir padrão
+auto-fit = cria colunas automaticamente conforme espaço
+minmax(300px, 1fr) = mínimo 300px, máximo 1 fração do espaço disponível
+RESULTADO: Grid responsivo SEM media queries! 🤯
+
+gap: 20px;
+
+Espaçamento entre células (como no Flexbox)
+
+1fr = "1 fração"
+
+Divide espaço disponível em frações iguais
+1fr 2fr = segunda coluna tem dobro do tamanho
+
+🔍 CONCEITOS IMPORTANTES:
+position: relative; no item
+
+Cria contexto para posicionamento absoluto
+
+position: absolute; no overlay
+
+Posiciona em relação ao item (não à página)
+
+transform: translateY(100%);
+
+Move overlay 100% para baixo (esconde)
+
+:hover .overlay
+
+Quando passar mouse no item, mostra overlay
