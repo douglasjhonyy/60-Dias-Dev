@@ -1,0 +1,41 @@
+# Dia 4 - CSS Grid Mastery
+
+## 🎯 Objetivo
+Dominar CSS Grid criando galeria estilo Pinterest com layouts variados.
+
+## 🚀 Funcionalidades
+- ✅ Grid responsivo automático (sem media queries!)
+- ✅ Itens de tamanhos diferentes (1x1, 2x1, 1x2, 2x2)
+- ✅ 9 gradientes diferentes
+- ✅ Overlay com efeito hover
+- ✅ Animações suaves
+- ✅ Mobile-first
+
+## 🛠️ Tecnologias
+- HTML5
+- CSS3 (Grid Layout)
+
+## 💡 Conceitos Dominados
+- `display: grid`
+- `grid-template-columns`
+- `repeat()` e `auto-fit`
+- `minmax()`
+- `grid-column: span`
+- `grid-row: span`
+- `gap`
+- `1fr` units
+- `:nth-child()`
+- `position: absolute/relative`
+
+## 🎨 Recursos de Design
+- 9 gradientes profissionais
+- Overlay com degradê
+- Hover effects
+- Box shadows
+- Responsive breakpoints
+
+## 📸 Preview
+[Inserir screenshot - desktop e mobile]
+
+---
+**Jhony** - Dia 4 de 60 | Grid Master 🎯
