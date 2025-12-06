@@ -1,0 +1,21 @@
+🔍 ENTENDENDO O CÓDIGO:
+1. document.getElementById('id')
+
+Pega elemento do HTML pelo ID
+Retorna o elemento para manipular
+
+2. .addEventListener('click', function() { })
+
+"Escuta" quando algo acontece (ex: click)
+Quando acontece, executa a função
+
+3. .textContent
+
+Muda o texto dentro do elemento
+Igual ao innerHTML mas mais seguro
+
+4. function() { }
+
+Bloco de código que só roda quando chamado
+Veremos mais sobre funções amanhã!
+
