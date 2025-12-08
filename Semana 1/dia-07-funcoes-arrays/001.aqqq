@@ -1,0 +1,47 @@
+console.log("🚀 JavaScript Carregado - Dia 7!");
+
+// ========================================
+// PARTE 1: FUNÇÕES
+// ========================================
+
+// FUNÇÃO SEM PARÂMETRO E SEM RETORNO
+function mostrarMensagem() {
+    console.log("Olá! Esta é uma função simples.");
+}
+
+// FUNÇÃO COM PARÂMETRO
+function saudar(nome) {
+    console.log(`Olá, ${nome}! Bem-vindo!`);
+}
+
+// FUNÇÃO COM RETORNO
+function somar(a, b) {
+    const resultado = a + b;
+    return resultado;
+}
+
+// FUNÇÃO QUE CALCULA IDADE
+function calcularIdade(anoNascimento) {
+    const anoAtual = 2024;
+    const idade = anoAtual - anoNascimento;
+    return idade;
+}
+
+// ARROW FUNCTION (forma moderna)
+const dobrar = (numero) => {
+    return numero * 2;
+};
+
+// ARROW FUNCTION SIMPLIFICADA
+const triplicar = (numero) => numero * 3;
+
+// TESTAR NO CONSOLE
+console.log("=== TESTANDO FUNÇÕES ===");
+mostrarMensagem();
+saudar("Jhony");
+console.log("5 + 3 =", somar(5, 3));
+console.log("Idade:", calcularIdade(1994));
+console.log("Dobro de 10:", dobrar(10));
+console.log("Triplo de 5:", triplicar(5));
+
+------------------------------------------------------------------------------
