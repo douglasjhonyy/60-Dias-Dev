@@ -52,8 +52,32 @@
             <h2>To-Do List Profissional (Com Persistência)</h2>
             <p class="info">Seus dados serão salvos automaticamente! Pode recarregar a página.</p>
 
-            <div></div>
+            <div class="input-group">
+                <input type="text" id="input-tarefa" placeholder="Nova tarefa...">
+                <button id="btn-adicionar" class="btn-primary"> + Adicionar</button>
+            </div>
+
+            <div class="stats">
+                <span id="total-tarefas">Total: 0</span>
+                <span id="concluidas">Concluídas: 0</span>
+                <span id="pendentes">Pendentes: 0</span>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn- active" data-filter="todas">Todas</button>
+                <button class="filter-btn" data-filter="pendentes">Pendentes</button>
+                <button class="filter-btn" data-filter="concluidas">Concluídas</button>
+            </div>
+
+            <ul id="lista-tarefas"></ul>
+
+            <button id="btn-limpar-todas" class="btn-danger">Limpar Todas</button>
          </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Jhony - Dia 8 | Dados Persistentes Master</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
