@@ -6,6 +6,54 @@
     <title>Objetos e LocalStorage - Dia 8</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Objetos & LocalStorage</h1>
+        <p>Dia 8 - Dados Persistente </p>
+    </header>
+
+    <main>
+        <!--Seção 1: Objetos-->
+
+        <section class="card">
+            <h2>Objetos Javascript</h2>
+            <div class="button-group">
+                <button id="btn-pessoa">Criar Pessoa</button>
+                <button id="btn-carro">Criar Carro</button>
+                <button id="btn-array-objetos">Array de Alunos</button>
+            </div>
+            <div id="resultado-objetos" class="resultado"></div>
+        </section>
+
+        <!--Seção 2: Json-->
+        <section>
+            <h2>JSON (Javascript Object Notation)</h2>
+            <div class="button-group">
+                <button id="btn-stringify">Objeto → JSON</button>
+                <button id="btn-parse">JSON → Objeto</button>
+                <button id="btn-exemplo">Exemplo Completo</button>
+            </div>
+            <div id="resultado-json" class="resultado"></div>
+        </section>
+
+        <!--Seção 3:LocalStorage-->
+        <section class="card">
+            <h2>LocalStorage</h2>
+            <div class="input-group">
+                <input type="text" id="input-nome" placeholder="Seu nome...">
+                <button id="btn-salvar">Salvar Nome</button>
+                <button id="btn-carregar">Carregar Nome</button>
+                <button id="btn-limpar-storage">Limpar Storage</button>
+            </div>
+            <div id="resultado-storage" class="resultado"></div>
+        </section>
+
+        <!-- SEÇÃO 4: PROJETO FINAL - TO-DO LIST COMPLETA -->
+         <section class="card destaque">
+            <h2>To-Do List Profissional (Com Persistência)</h2>
+            <p class="info">Seus dados serão salvos automaticamente! Pode recarregar a página.</p>
+
+            <div></div>
+         </section>
+    </main>
 </body>
 </html>
