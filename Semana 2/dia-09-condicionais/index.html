@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais e Lógica - Dia 9</title>
+</head>
+<body>
+    <header>
+        <h1>Lógica e Condicionais</h1>
+        <p>Dia 9 - Tomada de Decisões</p>
+    </header>
+
+    <main>
+        <!--Seção 1: If/Else-->
+        <section>
+            <h2>If/Else</h2>
+            <div class="input-group">
+                <input type="number" id="input-idade" placeholder="Digite sua Idade">
+                <button id="btn-verificar-idade">Verificar Idade</button>
+            </div>
+            <div id="resultado-idade" class="resultado"></div>
+        </section>
+
+        <!--Seção 2: Switch/Case-->
+        <section class="card">
+            <h2>Switch/Case</h2>
+            <div class="input-group">
+                <select id="select-dia">
+                    <option value="">Escolha o dia</option>
+                    <option value="1">Segunda</option>
+                    <option value="2">Terça</option>
+                    <option value="3">Quarta</option>
+                    <option value="4">Quinta</option>
+                    <option value="5">Sexta</option>
+                    <option value="6">Sábado</option>
+                    <option value="7">Domingo</option>
+                </select>
+                <button id="btn-verificar-dia">Ver Programação</button>
+            </div>
+            <div id="resultado-dia" class="resultado"></div>
+        </section>
+
+        <!--Seção 3: Operadores Lógicos-->
+        <section class="card">
+            <h2>Operadores Lógicos (&&, ||, !)</h2>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="check-maior-idade"> Maior de 18 anos
+                </label> 
+                <label>
+                    <input type="checkbox" id="check-tem-cnh">Tem CNH
+                </label>
+                <label>
+                    <input type="checkbox" id="check-tem-carro">Tem carro próprio
+                </label>
+            </div>
+            <button id="btn-verificar-requisitos">Verificar Requisitos</button>
+            <div id="resultado-requisitos"></div>
+        </section>
+
+        <!--Seção 4: Validação de Formulário-->
+        <section class="card">
+            <h2>Validação de Formulários</h2>
+            <form id="form-cadastro">
+                <div class="form-group">
+                    <input type="text" id="input-nome-completo" placeholder="Nome Completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="input-email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="input-senha" placeholder="Senha (mín. 6 caracteres)" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="input-confirmar-senha" placeholder="Confirmar senha" required>
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+            <div id="resultado-form" class="resultado"></div>
+        </section>
+
+        
+       <!-- SEÇÃO 5: CALCULADORA PROFISSIONAL -->
+        <section class="card destaque">
+            <h2>🔢 Calculadora Profissional</h2>
+            
+            <div class="calculadora">
+                <input type="text" id="display" class="display" readonly>
+                
+                <div class="buttons">
+                    <!-- Linha 1 -->
+                    <button class="btn-calc btn-func" onclick="limparDisplay()">C</button>
+                    <button class="btn-calc btn-func" onclick="apagarUltimo()">←</button>
+                    <button class="btn-calc btn-func" onclick="calcularPorcentagem()">%</button>
+                    <button class="btn-calc btn-operador" onclick="adicionarOperador('/')">÷</button>
+                    
+                    <!-- Linha 2 -->
+                    <button class="btn-calc" onclick="adicionarNumero('7')">7</button>
+                    <button class="btn-calc" onclick="adicionarNumero('8')">8</button>
+                    <button class="btn-calc" onclick="adicionarNumero('9')">9</button>
+                    <button class="btn-calc btn-operador" onclick="adicionarOperador('*')">×</button>
+                    
+                    <!-- Linha 3 -->
+                    <button class="btn-calc" onclick="adicionarNumero('4')">4</button>
+                    <button class="btn-calc" onclick="adicionarNumero('5')">5</button>
+                    <button class="btn-calc" onclick="adicionarNumero('6')">6</button>
+                    <button class="btn-calc btn-operador" onclick="adicionarOperador('-')">−</button>
+                    
+                    <!-- Linha 4 -->
+                    <button class="btn-calc" onclick="adicionarNumero('1')">1</button>
+                    <button class="btn-calc" onclick="adicionarNumero('2')">2</button>
+                    <button class="btn-calc" onclick="adicionarNumero('3')">3</button>
+                    <button class="btn-calc btn-operador" onclick="adicionarOperador('+')">+</button>
+                    
+                    <!-- Linha 5 -->
+                    <button class="btn-calc btn-zero" onclick="adicionarNumero('0')">0</button>
+                    <button class="btn-calc" onclick="adicionarNumero('.')">.</button>
+                    <button class="btn-calc btn-igual" onclick="calcular()">=</button>
+                </div>
+
+                <div id="historico" class="historico">
+                    <h3>Histórico</h3>
+                    <ul id="lista-historico"></ul>
+                    <button onclick="limparHistorico()" class="btn-limpar-hist">Limpar Histórico</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jhony - Dia 9 | Lógica Master</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+    </main>
+</body>
+</html>
