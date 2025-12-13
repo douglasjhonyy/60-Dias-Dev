@@ -31,9 +31,14 @@ header h1{
 }
 
 main{
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0;
     padding: 20px;
+}
+
+section{
+    margin-bottom: 10px;
+    
 }
 
 .card{
@@ -108,4 +113,174 @@ button:active{
     background: #f8f9fa;
     border-radius: 8px;
     border: 2px solid #0d42e169;
+}
+
+/*Checkbo Group*/
+.checkbox-group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/*Formulário*/
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+.form-group input{
+    width: 100%;
+}
+
+/*Calculadora*/
+
+.calculadora{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.display{
+    width: 100%;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    background: #5f85ac;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-calc{
+    padding: 20px;
+    font-size: 1.5rem;
+    background: white;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-calc:hover{
+    background: #f0f0f0;
+    transform: scale(1.05);
+    
+}
+
+.btn-calc:active{
+    transform: scale(0.95);
+}
+
+.btn-operador{
+    background: #ff9800;
+    color: white;
+    border-color: #ff9800;
+    font-size: 30px;
+}
+
+.btn-operador:hover{
+    background: #c47500;
+}
+
+.btn-func{
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.btn-func:hover{
+    background: #9e2f22;
+}
+
+.btn-igual{
+    background: #4caf50;
+    color: white;
+    border-color: #4caf50;
+    font-size: 30px;
+}
+
+.btn-igual:hover{
+    background: #2f6d32;
+}
+
+.btn-zero{
+    grid-column: span 2;
+}
+
+/*Histórico*/
+
+.historico{
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.historico h3{
+    color: #0D41E1;
+    margin-bottom: 15px;
+}
+
+#lista-historico{
+    list-style: none;
+}
+
+#lista-historico li{
+    padding: 10px;
+    margin-bottom: 8px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-limpar-hist{
+    width: 100%;
+    margin-top: 15px;
+    background: #e74c3c;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-top: 40px;
+}
+
+@media (max-width:768px){
+    header h1{
+        font-size: 2rem;
+    }
+
+    .calculadora{
+        max-width: 100%;
+    }
+    .btn-calc{
+        padding: 15px;
+        font-size: 1.2rem;
+    }
 }
