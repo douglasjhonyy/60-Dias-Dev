@@ -144,3 +144,30 @@ switch (comando){
 // QUANDO USAR IF vs SWITCH?
 // IF: Comparações complexas, ranges, operadores lógicos
 // SWITCH: Múltiplas opções específicas, mais legível
+
+
+
+// PARTE 3: INTERAÇÃO COM HTM
+
+// ELEMENTOS - SEÇÃO IF/ELSE
+
+const inputIdade = document.getElementById('input-idade');
+const btnVerificarIdade = document.getElementById('btn-verificar-idade');
+const resultadoIdade = document.getElementById('resultado-idade');
+
+// ELEMENTOS - SEÇÃO SWITCH
+
+const selectDia = document.getElementById('select-dia');
+const btnVrificarDia = document.getElementById('btn-verificar-dia');
+const resultadosdoDia = document.getElementById('resultado-dia');
+
+// ELEMENTOS - SEÇÃO OPERADORES LÓGICOS
+const checkMaiorIdade = document.getElementById('check-maior-idade');
+const checkTemCNH = document.getElementById('check-tem-cnh');
+const checkTemCarro = document.getElementById('check-tem-carro');
+const btnVerificarRequisitos = document.getElementById('btn-verificar-requisitos');
+const resultadoRequisitos = document.getElementById('resultado-requisitos');
+
+// ELEMENTOS - SEÇÃO FORMULÁRIO
+const formCadastro = document.getElementById('form-cadastro');
+const resultadoForm = document.getElementById('resultado-form');
