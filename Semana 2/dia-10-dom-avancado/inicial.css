@@ -41,6 +41,7 @@ main{
 }
 .card .destaque{
     background: linear-gradient(135deg, #980054 0%, #ba79ff 100% );
+    color: white;
 }
 
 h2{

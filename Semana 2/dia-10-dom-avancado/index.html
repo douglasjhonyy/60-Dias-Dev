@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +8,16 @@
 </head>
 <body>
     <header>
-        <h1>DOM Manipulation Avançado</h1>
+        <h1> DOM Manipulation Avançado</h1>
         <p>Dia 10 - Controle Total da Página</p>
     </header>
 
     <main>
-        <!--Seção 1: Seletores-->
+        <!-- SEÇÃO 1: SELETORES -->
         <section class="card">
-            <h2>Seletores Avançados</h2>
+            <h2> Seletores Avançados</h2>
             <div class="demo-box">
-                <p class="texto">Paráfrafo 1</p>
+                <p class="texto">Parágrafo 1</p>
                 <p class="texto">Parágrafo 2</p>
                 <p class="texto destaque">Parágrafo 3 (Destaque)</p>
                 <p class="texto">Parágrafo 4</p>
@@ -28,84 +28,84 @@
                 <button id="btn-destaque">Selecionar Destaque</button>
                 <button id="btn-resetar">Resetar</button>
             </div>
-            <div id="resultaos-seletores" class="resultado"></div>
+            <div id="resultado-seletores" class="resultado"></div>
         </section>
 
         <!-- SEÇÃO 2: CRIAÇÃO DE ELEMENTOS -->
-         <section class="card">
-            <h2>Criar e Adicionar Elementos</h2>
+        <section class="card">
+            <h2> Criar e Adicionar Elementos</h2>
             <div class="input-group">
                 <input type="text" id="input-item" placeholder="Digite um item...">
                 <button id="btn-adicionar-item">Adicionar</button>
             </div>
-            <ul id="btn-limpar-lista" class="btn-danger">Limpar lista</ul>
-         </section>
+            <ul id="lista-dinamica"></ul>
+            <button id="btn-limpar-lista" class="btn-danger">Limpar Lista</button>
+        </section>
 
-         <!-- SEÇÃO 3: CLASSES E ESTILOS -->
-          <section class="card">
-            <h2>Manipular Classes e Estilos</h2>
-            <div id="box-estilos">
+        <!-- SEÇÃO 3: CLASSES E ESTILOS -->
+        <section class="card">
+            <h2> Manipular Classes e Estilos</h2>
+            <div id="box-estilo" class="style-box">
                 <p>Clique nos botões para mudar meu estilo!</p>
             </div>
             <div class="button-group">
                 <button id="btn-toggle-dark">Toggle Dark Mode</button>
                 <button id="btn-aumentar">Aumentar Fonte</button>
                 <button id="btn-diminuir">Diminuir Fonte</button>
-                <button id="btn-aleatoria">Cor Aleatória</button>
+                <button id="btn-cor-aleatoria">Cor Aleatória</button>
                 <button id="btn-reset-estilo">Reset</button>
             </div>
-          </section>
+        </section>
 
-          <!-- SEÇÃO 4: EVENTOS AVANÇADOS -->
-          <section class="card">
-            <h2>Eventos e Delegação</h2>
+        <!-- SEÇÃO 4: EVENTOS AVANÇADOS -->
+        <section class="card">
+            <h2> Eventos e Delegação</h2>
             <div class="input-group">
                 <input type="text" id="input-botao" placeholder="Nome do botão...">
                 <button id="btn-criar-botao">Criar Botão Dinâmico</button>
             </div>
             <div id="container-botoes" class="botoes-container"></div>
             <div id="resultado-eventos" class="resultado"></div>
-          </section>
+        </section>
 
-          <!-- SEÇÃO 5: GALERIA DE IMAGENS COM MODAL -->
-           <section class="card-destaque">
-            <h2>Galeria de Imagens Interativas</h2>
-            <p class="info">Clique nas imagens para visualizar em tamanho grande!</p>
-
+        <!-- SEÇÃO 5: GALERIA DE IMAGENS COM MODAL -->
+        <section class="card destaque">
+            <h2> Galeria de Imagens Interativa</h2>
+            <p class="info"> Clique nas imagens para visualizar em tamanho grande!</p>
+            
             <div class="gallery-grid" id="gallery"></div>
 
             <!-- Modal -->
-             <div id="modal">
-                <span class="modal-close" id="modal-close">&times</span>
+            <div id="modal" class="modal">
+                <span class="modal-close" id="modal-close">&times;</span>
                 <img id="modal-img" class="modal-content">
-                <div id="modal-capition" class="modal-capition"></div>
+                <div id="modal-caption" class="modal-caption"></div>
                 <div class="modal-controls">
-                    <button id="btn-prev" class="modal-btn">Anterior</button>
-                    <button id="btn-next" class="modal-btn">Próximo</button>
+                    <button id="btn-prev" class="modal-btn">◄ Anterior</button>
+                    <button id="btn-next" class="modal-btn">Próximo ►</button>
                 </div>
-             </div>
-           </section>
+            </div>
+        </section>
 
-           <!-- SEÇÃO 6: DRAG AND DROP -->
-            <section class="card">
-                <h2>Drag and Drop (Arrastar e Soltar)</h2>
-                <div class="drag-container">
-                    <div class="drag-zone" id="zone-1">
-                        <h3>Zona 1</h3>
-                        <div class="drag-item" draggable="true">Item 1</div>
-                        <div class="drag-item" draggable="true">Item 2</div>
-                        <div class="drag-item" draggable="true">Item 3</div>    
-                    </div>
-
-                    <div class="drag-zone" id="zone-2">
-                        <h3>Zona 2</h3>
-                    </div>
+        <!-- SEÇÃO 6: DRAG AND DROP -->
+        <section class="card">
+            <h2> Drag and Drop (Arrastar e Soltar)</h2>
+            <div class="drag-container">
+                <div class="drag-zone" id="zone-1">
+                    <h3>Zona 1</h3>
+                    <div class="drag-item" draggable="true">Item 1</div>
+                    <div class="drag-item" draggable="true">Item 2</div>
+                    <div class="drag-item" draggable="true">Item 3</div>
                 </div>
-            </section>
+                <div class="drag-zone" id="zone-2">
+                    <h3>Zona 2</h3>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Jhony - Dia 10 | DOM Master</p>
+        <p>&copy; 2024 Jhony - Dia 10 | DOM Master </p>
     </footer>
 
     <script src="script.js"></script>
