@@ -193,7 +193,7 @@ javascriptmodal.addEventListener('click', (e) => {
 });
 Tradução:
 
-"Quando clicarem no modal, verifique: se clicaram no fundo preto (e não na imagem), então feche!"
+"Quando clicarem no modal, verifique: se clicaram no fundo preto (e não na imagem), então feche.!"
 
 
 8️⃣ NAVEGAÇÃO COM SETAS
