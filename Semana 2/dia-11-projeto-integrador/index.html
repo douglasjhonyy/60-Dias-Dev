@@ -51,5 +51,58 @@
             </div>
         </div>
     </section>
+
+    <!-- FORMULÁRIO DE NOVA TAREFA -->
+
+    <section>
+        <h2>+ Nova Tarefa</h2>
+        <form id="form-tarefa">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="input-titulo">Titulo *</label>
+                    <input 
+                    type="text"
+                    id="input-titulo"
+                    placeholder="Ex: Estudar Javascript">
+                </div>
+
+                <div class="form-group">
+                    <label for="input-categoria">Categoria</label>
+                    <select id="input-categoria">
+                        <option value="pessoal">🏠 Pessoal</option>
+                        <option value="trabalho">💼 Trabalho</option>
+                        <option value="estudos">📚 Estudos</option>
+                        <option value="saude">💪 Saúde</option>
+                        <option value="lazer">🎮 Lazer</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="input-descricao">Descrição</label>
+                    <textarea 
+                    id="input-descricao" 
+                    rows="3" 
+                    placeholder="Detalhes da Tarefa (opcional)">
+                </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-prioridade">Prioridade</label>
+                    <select id="input-prioridade">
+                        <option value="baixa">🟢 Baixa</option>
+                        <option value="media">🟡 Média</option>
+                        <option value="alta">🔴 Alta</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">+ Adicionar Tarefa</button>
+                <button type="button" id="btn-cancelar" class="btn btn-secondary">
+                        ❌ Cancelar
+                    </button>
+            </div>
+        </form>
+    </section>
 </body>
 </html>
