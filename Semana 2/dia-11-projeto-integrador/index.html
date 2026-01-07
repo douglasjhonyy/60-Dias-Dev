@@ -1,108 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager Pro - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--Header-->
+    <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <h1>Task Manager Pro</h1>
+            <h1>📋 Task Manager Pro</h1>
             <p class="subtitle">Gerencie suas tarefas de forma profissional</p>
         </div>
     </header>
 
-    <!--Main Container-->
-    <main class="container"></main>
-
-    <!--Estatística-->
-    <section>
-        <div class="stat-card">
-            <div class="stat-icon">📊</div>
-            <div class="stat-info">
-                <span class="stat-value" id="total-tarefas">0</span>
-                <span class="stat-label">Total</span>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <div class="stat-icon">✅</div>
-            <div class="stat-info">
-                <span class="stat-value" id="tarefas-concluidas">0</span>
-                <span class="stat-label">Concluidas</span>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <div class="stat-icon">⏳</div>
-            <div class="stat-info">
-                <span class="stat-value" id="tarefas-pendentes">0</span>
-                <span class="stat-label">Pendentes</span>
-            </div>
-        </div>
-
-        <div class="stat-card">
-            <div class="stat-icon">🔥</div>
-            <div class="stat-info">
-                <span class="stat-value" id="tarefas-urgentes">0</span>
-                <span class="stat-label">Urgentes</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- FORMULÁRIO DE NOVA TAREFA -->
-
-    <section>
-        <h2>+ Nova Tarefa</h2>
-        <form id="form-tarefa">
-            <div class="form-grid">
-                <div class="form-group">
-                    <label for="input-titulo">Titulo *</label>
-                    <input 
-                    type="text"
-                    id="input-titulo"
-                    placeholder="Ex: Estudar Javascript">
-                </div>
-
-                <div class="form-group">
-                    <label for="input-categoria">Categoria</label>
-                    <select id="input-categoria">
-                        <option value="pessoal">🏠 Pessoal</option>
-                        <option value="trabalho">💼 Trabalho</option>
-                        <option value="estudos">📚 Estudos</option>
-                        <option value="saude">💪 Saúde</option>
-                        <option value="lazer">🎮 Lazer</option>
-                    </select>
-                </div>
-
-                <div class="form-group full-width">
-                    <label for="input-descricao">Descrição</label>
-                    <textarea 
-                    id="input-descricao" 
-                    rows="3" 
-                    placeholder="Detalhes da Tarefa (opcional)">
-                </textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="input-prioridade">Prioridade</label>
-                    <select id="input-prioridade">
-                        <option value="baixa">🟢 Baixa</option>
-                        <option value="media">🟡 Média</option>
-                        <option value="alta">🔴 Alta</option>
-                    </select>
+    <!-- MAIN CONTAINER -->
+    <main class="container">
+        
+        <!-- ESTATÍSTICAS -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="total-tarefas">0</span>
+                    <span class="stat-label">Total</span>
                 </div>
             </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="tarefas-concluidas">0</span>
+                    <span class="stat-label">Concluídas</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="tarefas-pendentes">0</span>
+                    <span class="stat-label">Pendentes</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="tarefas-urgentes">0</span>
+                    <span class="stat-label">Urgentes</span>
+                </div>
+            </div>
+        </section>
 
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary">+ Adicionar Tarefa</button>
-                <button type="button" id="btn-cancelar" class="btn btn-secondary">
+        <!-- FORMULÁRIO DE NOVA TAREFA -->
+        <section class="form-section card">
+            <h2>➕ Nova Tarefa</h2>
+            <form id="form-tarefa">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="input-titulo">Título *</label>
+                        <input 
+                            type="text" 
+                            id="input-titulo" 
+                            placeholder="Ex: Estudar JavaScript"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-categoria">Categoria</label>
+                        <select id="input-categoria">
+                            <option value="pessoal">🏠 Pessoal</option>
+                            <option value="trabalho">💼 Trabalho</option>
+                            <option value="estudos">📚 Estudos</option>
+                            <option value="saude">💪 Saúde</option>
+                            <option value="lazer">🎮 Lazer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="input-descricao">Descrição</label>
+                        <textarea 
+                            id="input-descricao" 
+                            rows="3"
+                            placeholder="Detalhes da tarefa (opcional)"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-prioridade">Prioridade</label>
+                        <select id="input-prioridade">
+                            <option value="baixa">🟢 Baixa</option>
+                            <option value="media">🟡 Média</option>
+                            <option value="alta">🔴 Alta</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        ➕ Adicionar Tarefa
+                    </button>
+                    <button type="button" id="btn-cancelar" class="btn btn-secondary" style="display:none;">
                         ❌ Cancelar
                     </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- FILTROS E BUSCA -->
+        <section class="controls-section card">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="input-busca" 
+                    placeholder="🔍 Buscar tarefas..."
+                >
             </div>
-        </form>
-    </section>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="todas">Todas</button>
+                <button class="filter-btn" data-filter="ativas">Ativas</button>
+                <button class="filter-btn" data-filter="concluidas">Concluídas</button>
+            </div>
+
+            <div class="category-filters">
+                <button class="category-btn active" data-categoria="todas">Todas</button>
+                <button class="category-btn" data-categoria="pessoal">🏠 Pessoal</button>
+                <button class="category-btn" data-categoria="trabalho">💼 Trabalho</button>
+                <button class="category-btn" data-categoria="estudos">📚 Estudos</button>
+                <button class="category-btn" data-categoria="saude">💪 Saúde</button>
+                <button class="category-btn" data-categoria="lazer">🎮 Lazer</button>
+            </div>
+
+            <div class="sort-controls">
+                <label>Ordenar por:</label>
+                <select id="select-ordenacao">
+                    <option value="data-desc">Data (mais recente)</option>
+                    <option value="data-asc">Data (mais antiga)</option>
+                    <option value="prioridade">Prioridade</option>
+                    <option value="alfabetica">A-Z</option>
+                </select>
+            </div>
+
+            <button id="btn-limpar-concluidas" class="btn btn-danger">
+                🗑️ Limpar Concluídas
+            </button>
+        </section>
+
+        <!-- LISTA DE TAREFAS -->
+        <section class="tasks-section">
+            <h2>📝 Minhas Tarefas</h2>
+            <div id="lista-tarefas" class="tasks-list"></div>
+        </section>
+
+    </main>
+
+    <!-- MODAL DE CONFIRMAÇÃO -->
+    <div id="modal-confirmacao" class="modal">
+        <div class="modal-content">
+            <h3 id="modal-titulo">Confirmar ação</h3>
+            <p id="modal-mensagem">Tem certeza?</p>
+            <div class="modal-actions">
+                <button id="modal-confirmar" class="btn btn-danger">Confirmar</button>
+                <button id="modal-cancelar" class="btn btn-secondary">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Jhony - Task Manager Pro | Projeto Integrador Dia 11</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
