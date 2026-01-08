@@ -207,3 +207,66 @@ form-group textarea{
 }
 
 /*Controles (Filtros e Busca)*/
+
+.controls-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-box input{
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-box input:focus{
+    outline: none;
+    border-color: var(--primary);
+}
+
+.filter-buttons, .category-filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn, .category-btn{
+    padding: 10px 20px;
+    border: 2px solid var(--border);
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .category-btn:hover{
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active,
+.category-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-controls label {
+    font-weight: 600;
+}
+
+.sort-controls select {
+    padding: 10px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+}
