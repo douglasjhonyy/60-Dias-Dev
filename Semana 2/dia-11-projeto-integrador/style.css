@@ -163,3 +163,45 @@ form-group textarea{
 }
 
 /*Botões*/
+
+.btn{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary{
+    background: linear-gradient(135deg,  var(--primary), var(--secondary));
+    color: white;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary{
+    background: #6c757d;
+}
+
+.btn-secondary:hover{
+    background: #434a4e;
+}
+
+.btn-danger{
+    background: var(--danger);
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b11200;
+}
+
+.form-actions{
+    display: flex;
+    gap: 10px;
+}
