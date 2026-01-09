@@ -272,3 +272,172 @@ form-group textarea{
 }
 
 /*Lista de tarefas*/
+
+.tasks-section h2{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.tasks-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-item{
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.task-item:hover{
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.task-item.concluida{
+    opacity: 0.6;
+    background: #f8f9fa;
+}
+
+.task-checkbox {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.task-content{
+    flex: 1;
+}
+
+.task-header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.task-titulo{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.task-item.concluida .task-titulo{
+    text-decoration: line-through;
+    color: #999;
+}
+
+
+.task-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge-categoria {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.badge-prioridade {
+    color: white;
+}
+
+.badge-prioridade.baixa {
+    background: var(--success);
+}
+
+.badge-prioridade.media {
+    background: var(--warning);
+}
+
+.badge-prioridade.alta {
+    background: var(--danger);
+}
+
+.task-descricao {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.task-item.concluida .task-descricao {
+    text-decoration: line-through;
+}
+
+.task-meta {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.task-actions button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.btn-editar {
+    background: var(--info);
+    color: white;
+}
+
+.btn-editar:hover {
+    background: #1976d2;
+}
+
+.btn-deletar {
+    background: var(--danger);
+    color: white;
+}
+
+.btn-deletar:hover {
+    background: #c0392b;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.empty-state-icon {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
