@@ -36,3 +36,15 @@ const modalTitulo = document.getElementById('modal-titulo');
 const modalMensagem = document.getElementById('modal-mensagem');
 const modalConfirmar = document.getElementById('modal-confirmar');
 const modalCancelar = document.getElementById('modal-cancelar');
+
+// Inicialização
+
+function inicializar() {
+    carregarTarefas();
+    renderizarTarefas();
+    atualizarEstatisticas();
+    
+    console.log('✅ Sistema inicializado');
+    console.log(`📊 Total de tarefas: ${tarefas.length}`);
+}
+
