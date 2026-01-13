@@ -48,3 +48,75 @@ function inicializar() {
     console.log(`📊 Total de tarefas: ${tarefas.length}`);
 }
 
+//CRUD - CREATE, READ, UPDATE, DELETE
+
+/**
+ * Adicionar nova tarefa
+ */
+function adicionarTarefa(titulo, descricao, categoria, prioridade) {
+    const novaTarefa = {
+        id: Date.now(),
+        titulo: titulo.trim(),
+        descricao: descricao.trim(),
+        categoria: categoria,
+        prioridade: prioridade,
+        concluida: false,
+        dataCriacao: new Date().toISOString(),
+        dataModificacao: new Date().toISOString()
+    };
+    
+    tarefas.push(novaTarefa);
+    salvarTarefas();
+    
+    console.log('✅ Tarefa adicionada:', novaTarefa.titulo);
+}
+
+/**
+ * Editar tarefa existente
+ */
+function editarTarefa(id, dados) {
+    const tarefa = tarefas.find(t => t.id === id);
+    
+    if (tarefa) {
+        tarefa.titulo = dados.titulo.trim();
+        tarefa.descricao = dados.descricao.trim();
+        tarefa.categoria = dados.categoria;
+        tarefa.prioridade = dados.prioridade;
+        tarefa.dataModificacao = new Date().toISOString();
+        
+        salvarTarefas();
+        
+        console.log('✏️ Tarefa editada:', tarefa.titulo);
+    }
+}
+
+/**
+ * Deletar tarefa
+ */
+function deletarTarefa(id) {
+    const index = tarefas.findIndex(t => t.id === id);
+    
+    if (index !== -1) {
+        const tarefaDeletada = tarefas[index];
+        tarefas.splice(index, 1);
+        salvarTarefas();
+        
+        console.log('🗑️ Tarefa deletada:', tarefaDeletada.titulo);
+    }
+}
+/**
+ * Toggle status concluída
+ */
+function toggleConcluida(id) {
+    const tarefa = tarefas.find(t => t.id === id);
+    
+    if (tarefa) {
+        tarefa.concluida = !tarefa.concluida;
+        tarefa.dataModificacao = new Date().toISOString();
+        salvarTarefas();
+        
+        console.log(tarefa.concluida ? '✅ Concluída:' : '⏳ Reaberta:', tarefa.titulo);
+    }
+}
+
+//Localstorage 
