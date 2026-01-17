@@ -15,7 +15,115 @@
             </div>
 
             <div class="card">
-                <h2>Escolha a categoria</h2>
+                <h2>Escolha a categoria</h2><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo - JavaScript Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TELA INICIAL -->
+    <div id="tela-inicial" class="tela active">
+        <div class="container">
+            <div class="hero">
+                <h1>🎯 Quiz Interativo</h1>
+                <p class="subtitle">Teste seus conhecimentos em JavaScript!</p>
+            </div>
+
+            <div class="card">
+                <h2>📚 Escolha a Categoria</h2>
+                <div class="categorias">
+                    <button class="btn-categoria" data-categoria="javascript">
+                        💻 JavaScript
+                    </button>
+                    <button class="btn-categoria" data-categoria="html">
+                        🌐 HTML
+                    </button>
+                    <button class="btn-categoria" data-categoria="css">
+                        🎨 CSS
+                    </button>
+                    <button class="btn-categoria" data-categoria="geral">
+                        🔥 Conhecimentos Gerais
+                    </button>
+                </div>
+
+                <div class="dificuldade-section">
+                    <h3>⚡ Dificuldade</h3>
+                    <div class="dificuldades">
+                        <button class="btn-dificuldade active" data-dificuldade="facil">
+                            🟢 Fácil
+                        </button>
+                        <button class="btn-dificuldade" data-dificuldade="medio">
+                            🟡 Médio
+                        </button>
+                        <button class="btn-dificuldade" data-dificuldade="dificil">
+                            🔴 Difícil
+                        </button>
+                    </div>
+                </div>
+
+                <button id="btn-iniciar" class="btn btn-primary btn-large">
+                    🚀 Iniciar Quiz
+                </button>
+            </div>
+
+            <!-- RANKING -->
+            <div class="card">
+                <h2>🏆 Ranking Top 5</h2>
+                <div id="ranking-lista" class="ranking-lista"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TELA DO QUIZ -->
+    <div id="tela-quiz" class="tela">
+        <div class="container-quiz">
+            <!-- HEADER DO QUIZ -->
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <span id="quiz-categoria" class="badge">JavaScript</span>
+                    <span id="quiz-dificuldade" class="badge">Fácil</span>
+                </div>
+                <div class="quiz-stats">
+                    <div class="stat">
+                        <span class="stat-label">Pergunta</span>
+                        <span id="pergunta-atual" class="stat-value">1</span>
+                        <span class="stat-total">/ <span id="total-perguntas">10</span></span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Pontos</span>
+                        <span id="pontos-atuais" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Tempo</span>
+                        <span id="tempo-restante" class="stat-value">30</span>s
+                    </div>
+                </div>
+            </div>
+
+            <!-- BARRA DE PROGRESSO -->
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+
+            <!-- CARD DA PERGUNTA -->
+            <div class="quiz-card">
+                <h2 id="pergunta-texto" class="pergunta-texto">
+                    Carregando pergunta...
+                </h2>
+
+                <div id="opcoes-container" class="opcoes-container">
+                    <!-- Opções serão inseridas via JS -->
+                </div>
+
+                <button id="btn-proxima" class="btn btn-primary" style="display:none;">
+                    Próxima Pergunta →
+                </button>
+            </div>
+        </div>
+    </div>
                 <div class="categoria">
                     <button class="btn-categoria" data-categoria="javascript">Javascript</button>
                     <button class="btn-categoria" data-categoria="html">HTML</button>
@@ -88,5 +196,7 @@
                 </button>
         </div>
     </div>
+
+    <!--Tela de Resultado-->
 </body>
 </html>
