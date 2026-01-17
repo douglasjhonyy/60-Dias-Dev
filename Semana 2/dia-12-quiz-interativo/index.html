@@ -1,21 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Interativo - JavaScript Master</title>
-</head>
-<body>
-    <!--Tela inicial-->
-    <div id="tela-inicial" class="tela active">
-        <div class="container">
-            <div class="hero">
-                <h1>Quiz Interativo</h1>
-                <p>Teste seus conhecimentos em Javascript</p>
-            </div>
-
-            <div class="card">
-                <h2>Escolha a categoria</h2><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -124,79 +107,72 @@
             </div>
         </div>
     </div>
-                <div class="categoria">
-                    <button class="btn-categoria" data-categoria="javascript">Javascript</button>
-                    <button class="btn-categoria" data-categoria="html">HTML</button>
-                    <button class="btn-categoria" data-categoria="css">CSS</button>
-                    <button class="btn-categoria" data-categoria="geral">Conhecimentos Gerais</button>
-                </div>
 
-                <div class="dificuldade-section">
-                    <h3>Dificuldades</h3>
-                    <div class="dificuldades">
-                        <button class="btn-dificuldade active" data-dificuldade="facil">Fácil</button>
-                        <button class="btn-dificuldade" data-dificuldade="medio">Médio</button>
-                        <button class="btn-dificuldade" data-dificuldade="dificil">Difícil</button>
+    <!-- TELA DE RESULTADO -->
+    <div id="tela-resultado" class="tela">
+        <div class="container">
+            <div class="resultado-card">
+                <div id="resultado-emoji" class="resultado-emoji">🎉</div>
+                <h1 id="resultado-titulo" class="resultado-titulo">Parabéns!</h1>
+                <p id="resultado-mensagem" class="resultado-mensagem">Você foi muito bem!</p>
+
+                <div class="resultado-stats">
+                    <div class="resultado-stat">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <span class="stat-label">Pontuação Final</span>
+                            <span id="pontuacao-final" class="stat-value-large">0</span>
+                        </div>
+                    </div>
+
+                    <div class="resultado-stat">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <span class="stat-label">Acertos</span>
+                            <span id="total-acertos" class="stat-value-large">0</span>
+                        </div>
+                    </div>
+
+                    <div class="resultado-stat">
+                        <div class="stat-icon">❌</div>
+                        <div class="stat-info">
+                            <span class="stat-label">Erros</span>
+                            <span id="total-erros" class="stat-value-large">0</span>
+                        </div>
+                    </div>
+
+                    <div class="resultado-stat">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-info">
+                            <span class="stat-label">Tempo Total</span>
+                            <span id="tempo-total" class="stat-value-large">0s</span>
+                        </div>
                     </div>
                 </div>
 
-                <button id="btn-iniciar" class="btn btn-primary btn-large">Iniciar Quiz</button>
-            </div>
+                <div class="resultado-detalhes">
+                    <h3>📊 Análise de Desempenho</h3>
+                    <div class="performance-bar">
+                        <div class="performance-label">Precisão</div>
+                        <div class="bar-container">
+                            <div id="barra-precisao" class="bar-fill"></div>
+                        </div>
+                        <div id="percentual-precisao" class="performance-value">0%</div>
+                    </div>
+                </div>
 
-            <!--Ranking-->
-            <div class="card">
-                <h2>🏆 Ranking Top 5</h2>
-                <div id="ranking-lista" class="ranking-lista"></div>
+                <div class="resultado-acoes">
+                    <button id="btn-jogar-novamente" class="btn btn-primary btn-large">
+                        🔄 Jogar Novamente
+                    </button>
+                    <button id="btn-voltar-inicio" class="btn btn-secondary">
+                        🏠 Voltar ao Início
+                    </button>
+                </div>
             </div>
-
         </div>
     </div>
 
-    <!--Tela do Quiz-->
-    <div id="tela-quiz" class="tela">
-        <div class="container-quiz">
-            <!--Header do quiz-->
-            <div class="quiz-header">
-                <span id="quiz-categoria" class="badge">Javascript</span>
-                <span id="quiz-dificuldade" class="badge">Fácil</span>
-            </div>
-            <div class="quiz-stats">
-                <div class="stat">
-                    <span class="stat-label">Pergunta</span>
-                    <span id="pergunta-atual" class="stat-value">1</span>
-                    <span class="stat-total">/ <span id="total-perguntas">10</span></span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">Pontos</span>
-                    <span id="pontos-atuais" class="stat-value">0</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-label">Tempo</span>
-                    <span id="tempo-restante" class="stat-value">30</span>
-                </div>
-            </div>
-        </div>
-
-        <!--Barra de Progresso-->
-        <div class="progress-bar">
-            <div id="progress-fill" class="progress-fill"></div>
-        </div>
-
-        <!--Card da Pergunta-->
-
-        <div class="quiz-card">
-            <h2 id="pergunta-texto" class="pergunta-texto">Carregando Pergunta</h2>
-
-            <div id="opcoes-container" class="opcoes-container">
-                <!-- Opções serão inseridas via JS -->
-            </div>
-
-            <button id="btn-proxima" class="btn btn-primary" style="display:none;">
-                    Próxima Pergunta →
-                </button>
-        </div>
-    </div>
-
-    <!--Tela de Resultado-->
+    <script src="script.js"></script>
 </body>
 </html>
