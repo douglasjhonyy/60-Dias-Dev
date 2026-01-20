@@ -47,3 +47,13 @@ body{
         transform: translateY(0);
     }
 }
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container-quiz{
+    max-width: 900px;
+    margin: 0 auto;
+}
