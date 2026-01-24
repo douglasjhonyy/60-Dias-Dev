@@ -88,3 +88,71 @@ body{
 }
 
 /*Botões*/
+
+.btn{
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary{
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.btn-primary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0);
+}
+
+.btn-secondary{
+    background: #6c757d;
+    color: white;
+}
+
+.btn-large{
+    padding: 18px 50px;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*Categorias*/
+
+.card h2, .card h3{
+    color: var(--primary);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.categorias, .dificuldade{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-categoria, .btn-dificuldade{
+    padding: 20px;
+    border: 3px solid var(--border);
+    background: white;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-categoria.active, .btn-dificuldade.active{
+    background: cornflowerblue;
+    color: white;
+    border-color: rgba(49, 49, 253, 0.596);
+}
+
+.dificuldade-section{
+    margin-top: 30px;
+}
