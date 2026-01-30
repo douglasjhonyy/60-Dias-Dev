@@ -264,3 +264,35 @@ body{
 }
 
 /*Barra Progresso*/
+
+.progress-bar{
+    background: rgba(255, 255, 255, 0.3);
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.progress-fill{
+    height: 100%;
+    background: linear-gradient(90deg, var(--success), var(--warning));
+    transition: width 0.5s ease;
+    width: 0%;
+}
+
+/*Perguntas*/
+
+.quiz-card{
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.pergunta-texto{
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    text-align: center;
+}
