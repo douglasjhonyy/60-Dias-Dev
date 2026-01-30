@@ -214,3 +214,53 @@ body{
 }
 
 /*Quiz Header*/
+
+.quiz-header{
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.quiz-info{
+    display: flex;
+    gap: 10px;
+}
+
+.badge{
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: var(--primary);
+    color: white;
+}
+
+.quiz-stats{
+    display: flex;
+    gap: 30px;
+}
+
+.stat{
+    text-align: center;
+}
+
+.stat-value{
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.stats-total{
+    font-size: 1rem;
+    color: #999;
+}
+
+/*Barra Progresso*/
