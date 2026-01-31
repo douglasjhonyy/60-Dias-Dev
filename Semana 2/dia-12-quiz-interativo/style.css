@@ -352,3 +352,115 @@ body{
     25% { transform: translateX(-10px); }
     75% { transform: translateX(10px); }
 }
+
+/*Resultado*/
+.resultado-card{
+    background: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.resultado-emoji{
+    font-size: 6rem;
+    margin-bottom: 20px;
+    animation:  pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.resultado-titulo{
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.resultado-mensagem{
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.resultado-stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.resultado-stat{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.stat-icon{
+    font-size: 2.5rem;
+}
+
+.stat-value-large{
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.resultado-detalhes{
+    background: var(--light);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.performance-bar{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.performance-label{
+    font-weight: 600;
+    color: #666;
+}
+
+.bar-container{
+    background: white;
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bar-fill{
+    height: 100%;
+    background: linear-gradient(90deg, var(--success), var(--warning));
+    transition: width 1s ease;
+    width: 0%;
+}
+
+.performance-value{
+    font-weight: bold;
+    color: var(--primary);
+    min-width: 50px;
+}
+
+.resultado-acoes{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.resultado-acoes .btn{
+    flex: 1;
+    min-width: 200px;
+}
+
+/*Responsive*/
