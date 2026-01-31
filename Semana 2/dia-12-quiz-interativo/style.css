@@ -464,3 +464,36 @@ body{
 }
 
 /*Responsive*/
+
+@media (max-width: 768px){
+    
+    .hero h1{
+        font-size: 2.5rem;
+    }
+    
+    .card{
+        padding: 25px;
+    }
+
+    .quiz-header{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quiz-stats{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .pergunta-texto {
+        font-size: 1.4rem;
+    }
+    
+    .resultado-card {
+        padding: 30px 20px;
+    }
+    
+    .resultado-stats {
+        grid-template-columns: 1fr;
+    }
+}
