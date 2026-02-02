@@ -240,4 +240,17 @@ const bancoPerguntas = {
     ]
 };
 
-// Variaveis
+// Variaveis Globais
+
+let categoriaEscolhida = 'javascript';
+let dificuldadeEscolhida = 'facil';
+let perguntaQuiz = [];
+let perguntaAtualIndez = 0;
+let pontuacao = 0;
+let acertos = 0;
+let erros = 0;
+let tempoInicio = 0;
+let timerInterval = null;
+let tempoRestante = 30;
+
+// Elementos do DOM
