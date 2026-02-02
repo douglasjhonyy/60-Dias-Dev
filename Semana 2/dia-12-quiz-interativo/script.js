@@ -38,6 +38,12 @@ const bancoPerguntas = {
             correta:0,
             dificuldade: "medio"
         },
+        {
+            pergunta: "Qual é a diferença entre '==' e '==='? "
+            opcoes:{
+                "Não"
+            }
+        }
         
     ]
 }
