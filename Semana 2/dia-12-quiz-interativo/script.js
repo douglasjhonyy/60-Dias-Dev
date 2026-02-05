@@ -304,3 +304,42 @@ function inicializar() {
     console.log('✅ Quiz inicializado');
 }
 
+// Eventos
+
+function configurarEventos() {
+    // Categorias
+    btnsCategorias.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btnsCategorias.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            categoriaEscolhida = btn.dataset.categoria;
+        });
+    });
+    
+    // Dificuldades
+    btnsDificuldades.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btnsDificuldades.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            dificuldadeEscolhida = btn.dataset.dificuldade;
+        });
+    });
+    // Iniciar Quiz
+    btnIniciar.addEventListener('click', iniciarQuiz);
+    
+    // Próxima pergunta
+    btnProxima.addEventListener('click', proximaPergunta);
+    
+    // Resultado
+    btnJogarNovamente.addEventListener('click', () => {
+        resetarQuiz();
+        iniciarQuiz();
+    });
+    
+    btnVoltarInicio.addEventListener('click', () => {
+        resetarQuiz();
+        trocarTela('inicial');
+    });
+}
+
+//Iniciar Quiz
