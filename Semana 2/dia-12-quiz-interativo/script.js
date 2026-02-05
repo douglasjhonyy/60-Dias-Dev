@@ -256,3 +256,42 @@ let tempoRestante = 30;
 // Elementos do DOM
 
 // Telas
+const talaInicial = document.getElementById('tela-inicial');
+const telaQuiz = document.getElementById('tela-quiz');
+const telaResultado = document.getElementById('tela-resultado');
+
+// Tela Inicial
+const btnsCategorias = document.querySelectorAll('.btn-categoria');
+const btnsDificuldades = document.querySelectorAll('.btn-dificuldade');
+const btnIniciar = document.getElementById('btn-iniciar');
+const rankingLista = document.getElementById('ranking-lista');
+
+// Tela Quiz
+const quizCategoria = document.getElementById('quiz-categoria');
+const quizDificuldade = document.getElementById('quiz-dificuldade');
+const perguntaAtualEl = document.getElementById('pergunta-atual');
+const totalPerguntasEl = document.getElementById('total-perguntas');
+const pontosAtuaisEl = document.getElementById('pontos-atuais');
+const tempoRestanteEl = document.getElementById('tempo-restante');
+const progressFill = document.getElementById('progress-fill');
+const perguntaTexto = document.getElementById('pergunta-texto');
+const opcoesContainer = document.getElementById('opcoes-container');
+const btnProxima = document.getElementById('btn-proxima');
+
+// Tela Inicial
+const btnsCategorias = document.querySelectorAll('.btn-categoria');
+const btnsDificuldades = document.querySelectorAll('.btn-dificuldade');
+const btnIniciar = document.getElementById('btn-iniciar');
+const rankingLista = document.getElementById('ranking-lista');
+
+// Tela Quiz
+const quizCategoria = document.getElementById('quiz-categoria');
+const quizDificuldade = document.getElementById('quiz-dificuldade');
+const perguntaAtualEl = document.getElementById('pergunta-atual');
+const totalPerguntasEl = document.getElementById('total-perguntas');
+const pontosAtuaisEl = document.getElementById('pontos-atuais');
+const tempoRestanteEl = document.getElementById('tempo-restante');
+const progressFill = document.getElementById('progress-fill');
+const perguntaTexto = document.getElementById('pergunta-texto');
+const opcoesContainer = document.getElementById('opcoes-container');
+const btnProxima = document.getElementById('btn-proxima');
