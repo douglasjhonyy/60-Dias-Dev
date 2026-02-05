@@ -254,3 +254,5 @@ let timerInterval = null;
 let tempoRestante = 30;
 
 // Elementos do DOM
+
+// Telas
