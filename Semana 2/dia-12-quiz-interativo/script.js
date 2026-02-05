@@ -295,3 +295,12 @@ const progressFill = document.getElementById('progress-fill');
 const perguntaTexto = document.getElementById('pergunta-texto');
 const opcoesContainer = document.getElementById('opcoes-container');
 const btnProxima = document.getElementById('btn-proxima');
+
+// Iniciação
+
+function inicializar() {
+    configurarEventos();
+    carregarRanking();
+    console.log('✅ Quiz inicializado');
+}
+
