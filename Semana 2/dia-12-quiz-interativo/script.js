@@ -267,6 +267,7 @@ const btnIniciar = document.getElementById('btn-iniciar');
 const rankingLista = document.getElementById('ranking-lista');
 
 // Tela Quiz
+
 const quizCategoria = document.getElementById('quiz-categoria');
 const quizDificuldade = document.getElementById('quiz-dificuldade');
 const perguntaAtualEl = document.getElementById('pergunta-atual');
