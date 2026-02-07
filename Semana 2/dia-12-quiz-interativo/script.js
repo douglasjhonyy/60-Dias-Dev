@@ -359,3 +359,65 @@ function iniciarQuiz() {
         perguntasQuiz = todasPerguntas;
     }
     // Embaralhar e pegar 10
+    perguntasQuiz = embaralhar(perguntasQuiz).slice(0, 10);
+    
+    // Resetar variáveis
+    perguntaAtualIndex = 0;
+    pontuacao = 0;
+    acertos = 0;
+    erros = 0;
+    tempoInicio = Date.now();
+    
+    // Atualizar UI
+    quizCategoria.textContent = categoriaEscolhida.toUpperCase();
+    quizDificuldade.textContent = dificuldadeEscolhida.charAt(0).toUpperCase() + dificuldadeEscolhida.slice(1);
+    totalPerguntasEl.textContent = perguntasQuiz.length;
+
+    // Trocar tela
+    trocarTela('quiz');
+    
+    // Mostrar primeira pergunta
+    mostrarPergunta();
+}
+
+// Mostrar Pergunta
+function mostrarPergunta() {
+    if (perguntaAtualIndex >= perguntasQuiz.length) {
+        finalizarQuiz();
+        return;
+    }
+    
+    const pergunta = perguntasQuiz[perguntaAtualIndex];
+    
+    // Atualizar header
+    perguntaAtualEl.textContent = perguntaAtualIndex + 1;
+    pontosAtuaisEl.textContent = pontuacao;
+    
+    // Atualizar progresso
+    const progresso = ((perguntaAtualIndex + 1) / perguntasQuiz.length) * 100;
+    progressFill.style.width = progresso + '%';
+    
+    // Mostrar pergunta
+    perguntaTexto.textContent = pergunta.pergunta;
+    
+    // Limpar opções
+    opcoesContainer.innerHTML = '';
+    
+    // Criar opções
+    pergunta.opcoes.forEach((opcao, index) => {
+        const btn = document.createElement('button');
+        btn.className = 'opcao';
+        btn.textContent = opcao;
+        btn.addEventListener('click', () => selecionarOpcao(index));
+        opcoesContainer.appendChild(btn);
+    });
+      // Esconder botão próxima
+    btnProxima.style.display = 'none';
+    
+    // Iniciar timer
+    iniciarTimer();
+    
+    console.log('Pergunta', perguntaAtualIndex + 1, 'exibida');
+}
+
+// Selecionar Opção
