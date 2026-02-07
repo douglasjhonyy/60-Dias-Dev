@@ -344,3 +344,18 @@ function configurarEventos() {
 }
 
 //Iniciar Quiz
+
+function iniciarQuiz() {
+    console.log('🚀 Iniciando quiz...');
+    console.log('Categoria:', categoriaEscolhida);
+    console.log('Dificuldade:', dificuldadeEscolhida);
+    
+    // Filtrar perguntas
+    const todasPerguntas = bancoPerguntas[categoriaEscolhida] || bancoPerguntas.javascript;
+    perguntasQuiz = todasPerguntas.filter(p => p.dificuldade === dificuldadeEscolhida);
+    
+    // Se não houver perguntas suficientes, pegar todas
+    if (perguntasQuiz.length < 5) {
+        perguntasQuiz = todasPerguntas;
+    }
+    // Embaralhar e pegar 10
