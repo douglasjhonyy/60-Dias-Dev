@@ -421,3 +421,92 @@ function mostrarPergunta() {
 }
 
 // Selecionar Opção
+
+function selecionarOpcao(index) {
+    // Parar timer
+    pararTimer();
+    
+    const pergunta = perguntasQuiz[perguntaAtualIndex];
+    const opcoes = document.querySelectorAll('.opcao');
+    
+    // Desabilitar todas
+    opcoes.forEach(op => {
+        op.classList.add('disabled');
+    });
+    
+    // Verificar resposta
+    if (index === pergunta.correta) {
+        // CORRETA
+        opcoes[index].classList.add('correta');
+        acertos++;
+        
+        // Calcular pontos (bonus por tempo)
+        const bonus = Math.floor(tempoRestante / 3);
+        pontuacao += 10 + bonus;
+        
+        console.log('✅ Resposta correta! +' + (10 + bonus) + ' pontos');
+    } else {
+        // INCORRETA
+        opcoes[index].classList.add('incorreta');
+        opcoes[pergunta.correta].classList.add('correta');
+        erros++;
+        
+        console.log('❌ Resposta incorreta');
+    }
+    
+    // Atualizar pontos
+    pontosAtuaisEl.textContent = pontuacao;
+    
+    // Mostrar botão próxima
+    btnProxima.style.display = 'block';
+}
+
+//Próxima Pergunta 
+
+    function proximaPergunta() {
+    perguntaAtualIndex++;
+    mostrarPergunta();
+}
+
+// TIMER
+
+function iniciarTimer() {
+    tempoRestante = 30;
+    tempoRestanteEl.textContent = tempoRestante;
+    
+    timerInterval = setInterval(() => {
+        tempoRestante--;
+        tempoRestanteEl.textContent = tempoRestante;
+        
+        // Mudar cor quando tempo está acabando
+        if (tempoRestante <= 10) {
+            tempoRestanteEl.style.color = '#e74c3c';
+        } else {
+            tempoRestanteEl.style.color = '#667eea';
+        }
+        
+        // Tempo esgotado
+        if (tempoRestante <= 0) {
+            pararTimer();
+            
+            // Marcar como erro e mostrar resposta correta
+            const pergunta = perguntasQuiz[perguntaAtualIndex];
+            const opcoes = document.querySelectorAll('.opcao');
+            
+            opcoes.forEach(op => op.classList.add('disabled'));
+            opcoes[pergunta.correta].classList.add('correta');
+            
+            erros++;
+            btnProxima.style.display = 'block';
+            
+            console.log('⏰ Tempo esgotado!');
+        }
+    }, 1000);
+}
+
+function pararTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
