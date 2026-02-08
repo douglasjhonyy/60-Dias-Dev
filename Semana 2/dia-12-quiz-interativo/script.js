@@ -570,3 +570,106 @@ function finalizarQuiz() {
     trocarTela('resultado');
 }
 //Ranking
+
+function salvarNoRanking(pontos, acertos, erros, tempo) {
+    const ranking = carregarRankingDoStorage();
+    
+    const novoRecord = {
+        pontos: pontos,
+        acertos: acertos,
+        erros: erros,
+        tempo: tempo,
+        categoria: categoriaEscolhida,
+        dificuldade: dificuldadeEscolhida,
+        data: new Date().toISOString()
+    };
+    
+    ranking.push(novoRecord);
+    
+    // Ordenar por pontos (decrescente)
+    ranking.sort((a, b) => b.pontos - a.pontos);
+    
+    // Manter apenas top 10
+    const top10 = ranking.slice(0, 10);
+    
+    // Salvar
+    localStorage.setItem('quizRanking', JSON.stringify(top10));
+    
+    console.log('💾 Resultado salvo no ranking');
+}
+
+function carregarRankingDoStorage() {
+    try {
+        const ranking = localStorage.getItem('quizRanking');
+        return ranking ? JSON.parse(ranking) : [];
+    } catch (error) {
+        console.error('Erro ao carregar ranking:', error);
+        return [];
+    }
+}
+
+function carregarRanking() {
+    const ranking = carregarRankingDoStorage();
+    
+    rankingLista.innerHTML = '';
+    
+    if (ranking.length === 0) {
+        rankingLista.innerHTML = '<div class="empty-ranking">Nenhum record ainda. Seja o primeiro!</div>';
+        return;
+    }
+    // Mostrar top 5
+    ranking.slice(0, 5).forEach((record, index) => {
+        const div = document.createElement('div');
+        div.className = 'ranking-item';
+        
+        const medalhас = ['🥇', '🥈', '🥉', '4️⃣', '5️⃣'];
+        
+        div.innerHTML = `
+            <div class="ranking-posicao">${medalhas[index]}</div>
+            <div class="ranking-info">
+                <div class="ranking-nome">${record.categoria.toUpperCase()} - ${record.dificuldade}</div>
+                <div class="ranking-detalhes">${record.acertos} acertos • ${record.erros} erros</div>
+            </div>
+            <div class="ranking-pontos">${record.pontos} pts</div>
+        `;
+        
+        rankingLista.appendChild(div);
+    });
+}
+
+//Utilidades
+function trocarTela(tela) {
+    telaInicial.classList.remove('active');
+    telaQuiz.classList.remove('active');
+    telaResultado.classList.remove('active');
+    
+    if (tela === 'inicial') {
+        telaInicial.classList.add('active');
+        carregarRanking();
+    } else if (tela === 'quiz') {
+        telaQuiz.classList.add('active');
+    } else if (tela === 'resultado') {
+        telaResultado.classList.add('active');
+    }
+    
+    window.scrollTo(0, 0);
+}
+
+function resetarQuiz() {
+    pararTimer();
+    perguntasQuiz = [];
+    perguntaAtualIndex = 0;
+    pontuacao = 0;
+    acertos = 0;
+    erros = 0;
+    tempoInicio = 0;
+}
+
+function embaralhar(array) {
+    const copia = [...array];
+    for (let i = copia.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copia[i], copia[j]] = [copia[j], copia[i]];
+    }
+    return copia;
+}
