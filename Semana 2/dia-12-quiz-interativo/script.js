@@ -512,3 +512,61 @@ function pararTimer() {
 }
 
 //Finalizar quiz
+
+function finalizarQuiz() {
+    console.log('🏁 Quiz finalizado!');
+    
+    pararTimer();
+    
+    // Calcular tempo total
+    const tempoTotalSegundos = Math.floor((Date.now() - tempoInicio) / 1000);
+    const minutos = Math.floor(tempoTotalSegundos / 60);
+    const segundos = tempoTotalSegundos % 60;
+    
+    // Calcular precisão
+    const precisao = Math.round((acertos / perguntasQuiz.length) * 100);
+    
+    // Determinar mensagem
+    let emoji, titulo, mensagem;
+    
+    if (precisao >= 80) {
+        emoji = '🏆';
+        titulo = 'Excelente!';
+        mensagem = 'Você domina o assunto!';
+    } else if (precisao >= 60) {
+        emoji = '🎉';
+        titulo = 'Muito Bem!';
+        mensagem = 'Você foi bem!';
+    } else if (precisao >= 40) {
+        emoji = '👍';
+        titulo = 'Bom trabalho!';
+        mensagem = 'Continue praticando!';
+    } else {
+        emoji = '📚';
+        titulo = 'Continue estudando!';
+        mensagem = 'A prática leva à perfeição!';
+    }
+    
+    // Atualizar UI
+    resultadoEmoji.textContent = emoji;
+    resultadoTitulo.textContent = titulo;
+    resultadoMensagem.textContent = mensagem;
+    
+    pontuacaoFinal.textContent = pontuacao;
+    totalAcertos.textContent = acertos;
+    totalErros.textContent = erros;
+    tempoTotal.textContent = minutos > 0 ? `${minutos}m ${segundos}s` : `${segundos}s`;
+    
+    // Animar barra de precisão
+    setTimeout(() => {
+        barraPrecisao.style.width = precisao + '%';
+        percentualPrecisao.textContent = precisao + '%';
+    }, 500);
+    
+    // Salvar no ranking
+    salvarNoRanking(pontuacao, acertos, erros, tempoTotalSegundos);
+    
+    // Trocar tela
+    trocarTela('resultado');
+}
+//Ranking
