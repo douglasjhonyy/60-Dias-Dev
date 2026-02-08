@@ -510,3 +510,5 @@ function pararTimer() {
         timerInterval = null;
     }
 }
+
+//Finalizar quiz
