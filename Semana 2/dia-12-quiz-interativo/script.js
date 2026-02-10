@@ -673,3 +673,5 @@ function embaralhar(array) {
     }
     return copia;
 }
+
+// Executar
