@@ -240,12 +240,14 @@ const bancoPerguntas = {
     ]
 };
 
-// Variaveis Globais
+// ========================================
+// VARIÁVEIS GLOBAIS
+// ========================================
 
 let categoriaEscolhida = 'javascript';
 let dificuldadeEscolhida = 'facil';
-let perguntaQuiz = [];
-let perguntaAtualIndez = 0;
+let perguntasQuiz = [];
+let perguntaAtualIndex = 0;
 let pontuacao = 0;
 let acertos = 0;
 let erros = 0;
@@ -253,10 +255,12 @@ let tempoInicio = 0;
 let timerInterval = null;
 let tempoRestante = 30;
 
-// Elementos do DOM
+// ========================================
+// ELEMENTOS DO DOM
+// ========================================
 
 // Telas
-const talaInicial = document.getElementById('tela-inicial');
+const telaInicial = document.getElementById('tela-inicial');
 const telaQuiz = document.getElementById('tela-quiz');
 const telaResultado = document.getElementById('tela-resultado');
 
@@ -267,7 +271,6 @@ const btnIniciar = document.getElementById('btn-iniciar');
 const rankingLista = document.getElementById('ranking-lista');
 
 // Tela Quiz
-
 const quizCategoria = document.getElementById('quiz-categoria');
 const quizDificuldade = document.getElementById('quiz-dificuldade');
 const perguntaAtualEl = document.getElementById('pergunta-atual');
@@ -279,25 +282,22 @@ const perguntaTexto = document.getElementById('pergunta-texto');
 const opcoesContainer = document.getElementById('opcoes-container');
 const btnProxima = document.getElementById('btn-proxima');
 
-// Tela Inicial
-const btnsCategorias = document.querySelectorAll('.btn-categoria');
-const btnsDificuldades = document.querySelectorAll('.btn-dificuldade');
-const btnIniciar = document.getElementById('btn-iniciar');
-const rankingLista = document.getElementById('ranking-lista');
+// Tela Resultado
+const resultadoEmoji = document.getElementById('resultado-emoji');
+const resultadoTitulo = document.getElementById('resultado-titulo');
+const resultadoMensagem = document.getElementById('resultado-mensagem');
+const pontuacaoFinal = document.getElementById('pontuacao-final');
+const totalAcertos = document.getElementById('total-acertos');
+const totalErros = document.getElementById('total-erros');
+const tempoTotal = document.getElementById('tempo-total');
+const barraPrecisao = document.getElementById('barra-precisao');
+const percentualPrecisao = document.getElementById('percentual-precisao');
+const btnJogarNovamente = document.getElementById('btn-jogar-novamente');
+const btnVoltarInicio = document.getElementById('btn-voltar-inicio');
 
-// Tela Quiz
-const quizCategoria = document.getElementById('quiz-categoria');
-const quizDificuldade = document.getElementById('quiz-dificuldade');
-const perguntaAtualEl = document.getElementById('pergunta-atual');
-const totalPerguntasEl = document.getElementById('total-perguntas');
-const pontosAtuaisEl = document.getElementById('pontos-atuais');
-const tempoRestanteEl = document.getElementById('tempo-restante');
-const progressFill = document.getElementById('progress-fill');
-const perguntaTexto = document.getElementById('pergunta-texto');
-const opcoesContainer = document.getElementById('opcoes-container');
-const btnProxima = document.getElementById('btn-proxima');
-
-// Iniciação
+// ========================================
+// INICIALIZAÇÃO
+// ========================================
 
 function inicializar() {
     configurarEventos();
@@ -305,7 +305,9 @@ function inicializar() {
     console.log('✅ Quiz inicializado');
 }
 
-// Eventos
+// ========================================
+// EVENTOS
+// ========================================
 
 function configurarEventos() {
     // Categorias
@@ -325,6 +327,7 @@ function configurarEventos() {
             dificuldadeEscolhida = btn.dataset.dificuldade;
         });
     });
+    
     // Iniciar Quiz
     btnIniciar.addEventListener('click', iniciarQuiz);
     
@@ -343,7 +346,9 @@ function configurarEventos() {
     });
 }
 
-//Iniciar Quiz
+// ========================================
+// INICIAR QUIZ
+// ========================================
 
 function iniciarQuiz() {
     console.log('🚀 Iniciando quiz...');
@@ -358,6 +363,7 @@ function iniciarQuiz() {
     if (perguntasQuiz.length < 5) {
         perguntasQuiz = todasPerguntas;
     }
+    
     // Embaralhar e pegar 10
     perguntasQuiz = embaralhar(perguntasQuiz).slice(0, 10);
     
@@ -372,7 +378,7 @@ function iniciarQuiz() {
     quizCategoria.textContent = categoriaEscolhida.toUpperCase();
     quizDificuldade.textContent = dificuldadeEscolhida.charAt(0).toUpperCase() + dificuldadeEscolhida.slice(1);
     totalPerguntasEl.textContent = perguntasQuiz.length;
-
+    
     // Trocar tela
     trocarTela('quiz');
     
@@ -380,7 +386,10 @@ function iniciarQuiz() {
     mostrarPergunta();
 }
 
-// Mostrar Pergunta
+// ========================================
+// MOSTRAR PERGUNTA
+// ========================================
+
 function mostrarPergunta() {
     if (perguntaAtualIndex >= perguntasQuiz.length) {
         finalizarQuiz();
@@ -411,7 +420,8 @@ function mostrarPergunta() {
         btn.addEventListener('click', () => selecionarOpcao(index));
         opcoesContainer.appendChild(btn);
     });
-      // Esconder botão próxima
+    
+    // Esconder botão próxima
     btnProxima.style.display = 'none';
     
     // Iniciar timer
@@ -420,7 +430,9 @@ function mostrarPergunta() {
     console.log('Pergunta', perguntaAtualIndex + 1, 'exibida');
 }
 
-// Selecionar Opção
+// ========================================
+// SELECIONAR OPÇÃO
+// ========================================
 
 function selecionarOpcao(index) {
     // Parar timer
@@ -461,14 +473,18 @@ function selecionarOpcao(index) {
     btnProxima.style.display = 'block';
 }
 
-//Próxima Pergunta 
+// ========================================
+// PRÓXIMA PERGUNTA
+// ========================================
 
-    function proximaPergunta() {
+function proximaPergunta() {
     perguntaAtualIndex++;
     mostrarPergunta();
 }
 
+// ========================================
 // TIMER
+// ========================================
 
 function iniciarTimer() {
     tempoRestante = 30;
@@ -511,7 +527,9 @@ function pararTimer() {
     }
 }
 
-//Finalizar quiz
+// ========================================
+// FINALIZAR QUIZ
+// ========================================
 
 function finalizarQuiz() {
     console.log('🏁 Quiz finalizado!');
@@ -569,7 +587,10 @@ function finalizarQuiz() {
     // Trocar tela
     trocarTela('resultado');
 }
-//Ranking
+
+// ========================================
+// RANKING
+// ========================================
 
 function salvarNoRanking(pontos, acertos, erros, tempo) {
     const ranking = carregarRankingDoStorage();
@@ -617,6 +638,7 @@ function carregarRanking() {
         rankingLista.innerHTML = '<div class="empty-ranking">Nenhum record ainda. Seja o primeiro!</div>';
         return;
     }
+    
     // Mostrar top 5
     ranking.slice(0, 5).forEach((record, index) => {
         const div = document.createElement('div');
@@ -637,7 +659,10 @@ function carregarRanking() {
     });
 }
 
-//Utilidades
+// ========================================
+// UTILIDADES
+// ========================================
+
 function trocarTela(tela) {
     telaInicial.classList.remove('active');
     telaQuiz.classList.remove('active');
@@ -674,4 +699,14 @@ function embaralhar(array) {
     return copia;
 }
 
-// Executar
+// ========================================
+// EXECUTAR
+// ========================================
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inicializar);
+} else {
+    inicializar();
+}
+
+console.log('✅ Quiz Interativo - Pronto!');
