@@ -26,7 +26,31 @@
         </div>
 
         <!--Tela Cronometro-->
-        <div id="tela-cronometro" class="tela active"></div>
+        <div id="tela-cronometro" class="tela active">
+            <div class="display-grande">
+                <span id="cronometro-display" class="tempo-display">00:00:00</span>
+                <span id="cronometro-ms" class="milisegundos">.000</span>
+            </div>
+
+            <div class="controles">
+                <button id="btn-cronometro-start" class="btn btn-success btn-large"> Iniciar </button>
+                <button id="btn-cronometro-pause" class="btn btn-warning btn-large" style="display:none;">
+                    ⏸️ Pausar
+                </button>
+                <button id="btn-cronometro-lap" class="btn btn-secondary" style="display:none;"></button>
+                <button id="btn-cronometro-reset" class="btn btn-danger">Zerar</button>
+            </div>
+
+            <div class="laps-contaniner">
+                <h3>Voltas</h3>
+                <div id="laps-lista" class="laps-lista"></div>
+            </div>
+        </div>
+
+        <!--Tela Timer-->
+
+
+
     </div>
 </body>
 </html>
