@@ -95,6 +95,56 @@
         </div>
 
         <!--Tela pomodoro-->
+        <div id="tela-pomodoro" class="tela">
+            <div class="pomodoro-info">
+                <div class="pomodoro-status">
+                    <span id="pomodoro-modo" class="pomodoro-badge">Foco</span>
+                    <span id="pomodoro-ciclo">Ciclo 1/4</span>
+                </div>
+            </div>
+
+            <div class="display-grande">
+                <span id="pomodoro-display" class="tempo-display">25:00</span>
+            </div>
+
+            <div class="pomodoro-config">
+                <div class="config-item">
+                    <label> Foco (min)</label>
+                    <input type="number" id="pomodoro-work" min="1" max="60" value="25">
+                </div>
+                <div class="config-item">
+                    <label> Pausa curta (min)</label>
+                    <input type="number" id="podomodoro-short" min="1" max="15" value="5">
+                </div>
+            </div>
+
+            <div class="controles">
+                <button id="btn-pomodoro-start" class="btn btn-sucess btn-large">Iniciar</button>
+                <button id="btn-pomodoro-pause" class="btn btn-warning btn-large" style="display:none;">
+                    Pausar
+                </button>
+                <button id="btn-pomodoro-skip" class="btn btn-secondary" style="display: none;">Pular</button>
+                <button id="btn-pomodoro-reset" class="btn btn-danger">Reiniciar</button>
+            </div>
+            <div class="pomodoro-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="pomodoro-completos">0</div>
+                    <div class="stat-label">Pomodoros Hoje</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="tempo-focado">0h 0m</div>
+                    <div class="stat-label">Tempo Focado</div>
+                </div>
+        </div>
+    </div>
+
+
+
+    <!--Historico-->
+        <div class="historico-section">
+            <h3> Histórico de Sessões</h3>
+            <div id="historico-lista" class="historico-lista"></div>
+        </div>
     </div>
 </body>
 </html>
