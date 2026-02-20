@@ -6,8 +6,8 @@
     box-sizing: border-box;
 }
 :root {
-    --primary: #06d9b6;
-    --secondary: #9d007a;
+    --primary: #547458;
+    --secondary: #ede574;
     --success: #4caf50;
     --warning: #ff9800;
     --danger: #e74c3c;
@@ -44,3 +44,32 @@ body{
 }
 
 /*Header*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.header h1{
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon{
+    background: rgba(255, 255, 255, 0.2 );
+    border: none;
+    padding: 12px 16px;
+    border-radius: 25%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
