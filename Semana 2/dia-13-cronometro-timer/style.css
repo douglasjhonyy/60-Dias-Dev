@@ -135,3 +135,36 @@ body{
         transform: translateY(0);
     }
 }
+
+/*Display*/
+
+.display-grande{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.tempo-display{
+    font-size: 5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--primary);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.tempo-display-medio{
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.milisegundos{
+    font-size: 2rem;
+    color: var(--secondary);
+    opacity: 0.7;
+}
+
+.data-display {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
