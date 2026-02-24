@@ -168,3 +168,57 @@ body{
     color: #666;
     margin-top: 10px;
 }
+
+/*Botões*/
+
+.controles{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.btn{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-large{
+    padding: 20px 40px;
+    font-size: 1.3rem;
+}
+
+.btn-sucess{
+    background: var(--success);
+    color: white;
+}
+
+.btn-warning{
+    background-color: var(--warning);
+    color: white;
+}
+
+.btn-danger{
+    background: var(--danger);
+    color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
