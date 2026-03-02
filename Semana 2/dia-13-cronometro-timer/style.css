@@ -346,3 +346,30 @@ body{
 }
 
 /*Timer Circulo de Progresso */
+
+.progress-circle{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.progress-ring{
+    transform: rotate(-90deg);
+}
+
+.progress-ring-bg{
+    fill: none;
+    stroke: var(--light);
+    stroke-width: 10;
+}
+
+.progress-ring-circle{
+    fill: none;
+    stroke: var(--primary);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear;
+}
+
+/*Pomodoro*/
+
