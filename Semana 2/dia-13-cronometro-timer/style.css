@@ -224,3 +224,62 @@ body{
 }
 
 /*Cronometro*/
+
+.laps-container{
+    margin-top: 30px;
+}
+
+.laps-container h3{
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.laps-lista{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.laps-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: var(--light);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    animation: slidIn 0.3s ease;
+}
+
+@keyframes slidIn{
+    from {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.lap-numero{
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.lap-tempo{
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+}
+
+.empty-laps{
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
+
+/*Timer*/
+
+.timer-setup{
+    margin-bottom: 30px;
+}
+
+.timer
