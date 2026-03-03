@@ -576,7 +576,7 @@ body{
     .controles{
         flex-direction: column;
     }
-    .btn{
+    .btn{d
         width: 100%;
     }
 }
