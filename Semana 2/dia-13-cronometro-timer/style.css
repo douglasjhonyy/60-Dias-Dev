@@ -460,3 +460,54 @@ body{
 }
 
 /*Relogio Mundial*/
+
+.relogio-local{
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--border);
+}
+
+.relogio-local h3{
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.relogio-mundiais h3{
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.relogio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.relogio-card{
+    background: var(--light);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.relogio-card:hover{
+    transform: translateY(-5px);
+}
+
+.relogio-cidade{
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.relogio-hora{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+    font-variant-numeric: tabular-nums;
+}
+
+/*Historico*/
